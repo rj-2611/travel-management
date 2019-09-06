@@ -1,0 +1,39 @@
+<div class="login">
+    
+    <form #userForm="ngForm" appIdentityRevealed >
+        <h3 style="color: brown;">Sign In to Continue</h3>
+        <div class="cross-validation"
+            [class.cross-validation-error]="userForm.errors?.identityRevealed && (userForm.touched || userForm.dirty)">
+            <div class="form-group">
+                <input id="id" type="text" placeholder="User Id" name="id" class="form-control" required minlength="10"
+                    required maxlength="10" pattern="^[0-9]*$" [(ngModel)]="user.id" #id="ngModel">
+
+                <div *ngIf="id.invalid && (id.dirty || id.touched)" class="alert alert-danger">
+
+                    <div *ngIf="id.errors.required">
+                        This field can't be empty.
+                    </div>
+                    <div *ngIf="id.errors.minlength || id.errors.pattern">
+                        Please enter a valid Mobile number.
+                    </div>
+                    <div *ngIf="id.errors.maxlength">
+                        Please enter a valid Mobile number.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input id="pwd" type="password" placeholder="Password" name="pwd" class="form-control" required
+                    minlength="1" [(ngModel)]="user.pwd" #pwd="ngModel">
+                <div *ngIf="pwd.invalid && (pwd.dirty || pwd.touched)" class="alert alert-danger">
+                    <div *ngIf="pwd.errors.required">
+                        This field can't be empty.
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default" [disabled]="userForm.invalid">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

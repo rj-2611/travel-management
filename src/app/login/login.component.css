@@ -1,0 +1,140 @@
+
+.login {
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: white;
+    border-radius: 5px;
+}
+
+form {
+    margin: 32%;
+}
+
+.cross-validation-error input {
+    border-left: 1px solid red;
+}
+
+.alert {
+    padding: 0.1rem;
+    margin-bottom: 0.2rem;
+    width: 250px;
+}
+
+
+.form-group {
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
+}
+
+
+.login input[type=text]{
+    width: 250px;
+    height: 30px;
+    background: black;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+.login input[type=password]{
+    width: 250px;
+    height: 30px;
+    background: black;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+.login input[type=button]{
+    width: 260px;
+    height: 35px;
+    background: black;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #a18d6c;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px;
+    margin-top: 10px;
+    float: left;
+}
+
+.login input[type=button]:hover{
+    opacity: 0.8;
+}
+
+.login input[type=button]:active{
+    opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+    outline: none;
+}
+
+.login button {
+    width: 250px;
+    height: 35px;
+    background: black;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #a18d6c;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+.login button:focus {
+    outline: none;
+}
+
+.login button:hover {
+    opacity: 0.8;
+}
+
+
+.login button:active {
+    opacity: 0.6;
+}
+
+::-webkit-input-placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 900px) {
+    .login {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    form {        
+        margin: 0;
+    }
+  }
