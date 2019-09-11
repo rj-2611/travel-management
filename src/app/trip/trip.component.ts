@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TripService } from '../Service/trip.service';
+import { Tripinfo } from '../Model/tripinfo';
 declare var jquery: any;
 declare var $: any;
 @Component({
@@ -8,10 +10,15 @@ declare var $: any;
 })
 export class TripComponent implements OnInit {
 
-  constructor() { }
+  trips: Tripinfo[];
+
+  constructor(private tripInfoService: TripService) { }
 
   ngOnInit() {
-    
+    this.tripInfoService.findAll().subscribe(data => {
+      this.trips = data;
+      console.log(this.trips);
+    });
   }
   filter() {
     $("#myInput").on("keyup", function () {

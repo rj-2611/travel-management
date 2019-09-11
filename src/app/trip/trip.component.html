@@ -1,8 +1,8 @@
-<div class="container">
-    <div class="card my-5" >
-        <div class="card-body" style="margin-top: 5%;">
+
+    <div class="content" >
+        
         <h2>Trip Information</h2>
-        <input class="form-control" id="myInput" (keypress)="filter()" type="text" placeholder="Search for anything.." style="margin-bottom: 8px;">
+        <input class="form-control" id="myInput" (keypress)="filter()" type="text" placeholder="Search for anything.." style="margin-bottom: 15px;">
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
             <tr>
@@ -18,22 +18,18 @@
             </tr>
             </thead>
             <tbody id="myTable">
-            <!-- <tr *ngFor="let event of events">
-                <td>{{ event.id }}</td>
-                <td>{{ event.empName }}</td>
-                <td>{{ event.empId }}</td>
-                <td>{{ event.eventId }}</td>
-                <td>{{ event.eventName }}</td>
-                <td>{{ event.location }}</td>
-                <td>
-                <button class="btn btn-success btn-md" [routerLink]="['/participated', event.empId, event.eventId]" target="_blank">
-                    <span>Trigger</span>
-                    <i class="material-icons" style="vertical-align: middle">mail_outline</i>
-                </button>
-                </td>
-            </tr> -->
+            <tr *ngFor="let trip of trips">
+                <td>{{ trip.tripId }}</td>
+                <td>{{ trip.empName }}</td>
+                <td>{{ trip.empMobile }}</td>
+                <td>{{ trip.custName }}</td>
+                <td>{{ trip.custMobile }}</td>
+                <td>{{ trip.source }}</td>
+                <td>{{ trip.destination }}</td>
+                <td>{{ trip.pickupTime }}</td>
+                <td>{{ trip.dropTime }}</td>
+            </tr>
             </tbody>
         </table>
-        </div>
+        
     </div>
-</div>
