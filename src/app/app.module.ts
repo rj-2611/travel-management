@@ -16,6 +16,7 @@ import { BookrideComponent } from './bookride/bookride.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AboutComponent } from './about/about.component';
 import { HelpComponent } from './help/help.component';
+import { HomeComponent } from './home/home.component';
 
 
 const appRoutes: Routes = [
@@ -25,8 +26,9 @@ const appRoutes: Routes = [
   { path: 'settings', component: SettingsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'help', component: HelpComponent },
+  { path: 'home', component: HomeComponent },
   { path: '',
-    redirectTo: '/trip',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   { path: '**', component: TripComponent }
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     BookrideComponent,
     SettingsComponent,
     AboutComponent,
-    HelpComponent
+    HelpComponent,
+    HomeComponent
   ],
   imports: [RouterModule.forRoot(
     appRoutes,
