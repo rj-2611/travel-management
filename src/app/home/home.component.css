@@ -1,13 +1,13 @@
 body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
-    color: #17a2b8;
+    color: #060707;
   }
   p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
+  .margin {margin-bottom: 20px;}
   .bg-1 { 
-    background-color: #17a2b8; /* Green */
-    color: #ffffff;
+    background-color: #f3f3f3; /* Green */
+    color: #000000;
   }
   .bg-2 { 
     background-color: #474e5d; /* Dark Blue */
@@ -22,7 +22,7 @@ body {
     color: #fff;
   }
   .container-fluid {
-    padding-top: 70px;
+    padding-top: 30px;
     padding-bottom: 70px;
   }
   .navbar {
@@ -38,9 +38,19 @@ body {
     color: #1abc9c !important;
   }
   .center {
-      text-align: left;
+    text-align: left;
     padding-top: 100px;
+    padding-left: 150px;
   }
   .form-control {
-    width: 50%;
+    width: 70%;
 }
+
+.container {
+  padding-left: 0%;
+}
+
+img {
+  border-radius: 5px;
+}
+
