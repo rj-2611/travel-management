@@ -65,3 +65,4 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export const routing = RouterModule.forRoot(appRoutes);

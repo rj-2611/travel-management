@@ -31,7 +31,7 @@
               class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="600" height="350">
           </div>
           <div class="carousel-item">
-            <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278__340.jpg" alt="Chicago"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRs9HnUjOn3vQCkF8iY0Gt1q22ooaZ_fH77ocq5D7gmjqFRMBN0" alt="Chicago"
               class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="600" height="350">
           </div>
           <div class="carousel-item">
@@ -68,14 +68,16 @@
       <div class="tab-content">
         <div id="home" class="container tab-pane active"><br>
 
-          <form>
-            <div class="form-group">
+          <form (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
               <label for="mobile">User ID</label>
-              <input type="text" class="form-control" id="mobile" placeholder="Contact Number">
+              <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" placeholder="Contact Number" required>
+              <div *ngIf="f.submitted && !username.valid">Username is required</div>
             </div>
-            <div class="form-group">
-              <label for="pwd">Password</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Password">
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" placeholder="Password" required>
+              <div *ngIf="f.submitted && !password.valid">Password is required</div>
             </div>
             <button type="submit" class="btn btn-success btn-md">Sign In</button>
           </form>
